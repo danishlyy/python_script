@@ -37,10 +37,28 @@ print(next(i))  # 2
 print(next(i))  # 3
 # print(next(i)) #StopIteration
 
-for i in range(10,20,2):
+for i in range(10, 20, 2):
     # 10
     # 12
     # 14
     # 16
     # 18
+    print(i)
+
+
+# 生成器
+def f_range(start, stop, step):
+    x = start
+    while x < stop:
+        yield x
+        x += step
+
+
+for i in f_range(10, 13, 0.5):
+    # 10
+    # 10.5
+    # 11.0
+    # 11.5
+    # 12.0
+    # 12.5
     print(i)
