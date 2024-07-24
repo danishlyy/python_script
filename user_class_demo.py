@@ -25,5 +25,5 @@ user2.print_role()  # Mike : 20 player
 user1.update_name('Peter')
 user1.print_role() # Peter : 18 teacher
 user1.name = 'Jack'
-user1.print_role() # __name 私有 只能通过方法修改，不可以直接改变属性值
+user1.print_role() # __name 私有 只能通过方法修改，不可以直接改变属性值 Tom : 18 teacher
 
