@@ -20,7 +20,8 @@ class Monster():
     def run(self):
         print('移动一个位置')
 
-    pass
+    def who_ami(self):
+        print('I am Monster')
 
 
 class Animals(Monster):
@@ -32,7 +33,12 @@ class Animals(Monster):
 
 class Boss(Monster):
     '定义一个超级怪物'
-    pass
+
+    def __init__(self, age=20):
+        super().__init__(age)
+
+    def who_ami(self):
+        print('I am Boss')
 
 
 user1 = User('Tom', 18, 'teacher')
@@ -52,3 +58,12 @@ a0.run()  # 移动一个位置
 animals1 = Animals(20)
 animals1.run()  # 移动一个位置
 print(animals1.age)  # 20
+
+a3 = Boss()
+a3.who_ami()  # I am Boss
+
+print('a1的类型是 %s' % type(animals1))  # a1的类型是 <class '__main__.Animals'>
+print('a0的类型是 %s' % type(a0))  # a0的类型是 <class '__main__.Monster'>
+print('a3的类型是 %s' % type(a3))  # a3的类型是 <class '__main__.Boss'>
+
+print('a3是否为Boss的子类: %s' % isinstance(a3, Boss))  # a3是否为Boss的子类: True
