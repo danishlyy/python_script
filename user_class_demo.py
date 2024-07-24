@@ -1,11 +1,11 @@
 class User():  # 定义一个类
     def __init__(self, name, age, occupation):
-        self.name = name  # 属性
+        self.__name = name  # 属性
         self.age = age
         self.occupation = occupation
 
     def print_role(self):  # 定义一个方法
-        print('%s : %s %s' % (self.name, self.age, self.occupation))
+        print('%s : %s %s' % (self.__name, self.age, self.occupation))
 
     def update_name(self,new_name):
         self.name = new_name
@@ -24,3 +24,6 @@ user2.print_role()  # Mike : 20 player
 
 user1.update_name('Peter')
 user1.print_role() # Peter : 18 teacher
+user1.name = 'Jack'
+user1.print_role() # __name 私有 只能通过方法修改，不可以直接改变属性值
+
