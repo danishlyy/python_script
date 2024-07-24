@@ -27,7 +27,7 @@ class Animals(Monster):
     '定义一个普通怪物'
 
     def __init__(self, age=10):
-        self.age = age
+        super().__init__(age)
 
 
 class Boss(Monster):
